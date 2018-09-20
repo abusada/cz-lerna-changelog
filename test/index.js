@@ -1,6 +1,5 @@
 import assert from 'assert';
 import shell from 'shelljs';
-// import PackageUtilities from 'lerna/lib/PackageUtilities';
 const Project = require("@lerna/project");
 
 import stub from './_stub';
