@@ -2,11 +2,11 @@
   "name": "cz-lerna-changelog",
   "description": "Commitizen adapter following the conventional-changelog format.",
   "main": "lib/index.js",
-  "version" : "1.0.0",
+  "version": "1.0.0",
   "scripts": {
     "build": "babel src -d lib",
     "commit": "git-cz",
-    "test": "mocha --compilers js:babel-register test/**/*.js",
+    "test": "mocha --compilers js:@babel/register test/**/*.js",
     "prepublish": "npm run build",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post",
     "postinstall": "npm run build"
@@ -29,9 +29,10 @@
     "lerna": "^3.0.0"
   },
   "devDependencies": {
-    "babel-cli": "6.8.0",
-    "babel-preset-es2015": "6.6.0",
-    "babel-register": "^6.18.0",
+    "@babel/cli": "^7.1.0",
+    "@babel/core": "^7.1.0",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/register": "^7.0.0",
     "commitizen": "^2.9.5",
     "cz-conventional-changelog": "^1.2.0",
     "inquirer": "^3.0.4",
