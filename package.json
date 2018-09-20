@@ -8,7 +8,8 @@
     "commit": "git-cz",
     "test": "mocha --compilers js:babel-register test/**/*.js",
     "prepublish": "npm run build",
-    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post",
+    "postinstall": "npm run build"
   },
   "repository": {
     "type": "git",
